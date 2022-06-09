@@ -1,0 +1,186 @@
+[
+    {
+        "request": {
+            "allowRedirects": true,
+            "auth": null,
+            "body": {
+                "company": {
+                    "code": 2020,
+                    "name": "KPW"
+                },
+                "id": 11,
+                "name": "Kachen",
+                "username": "Learning3Thai"
+            },
+            "cert": null,
+            "data": null,
+            "headers": {
+                "Accept": "application/json, */*",
+                "Content-Type": "application/json",
+                "User-Agent": "RESTinstance/1.3.0"
+            },
+            "method": "POST",
+            "netloc": "jsonplaceholder.typicode.com",
+            "path": "/users",
+            "proxies": {},
+            "query": {},
+            "scheme": "https",
+            "sslVerify": true,
+            "timeout": [
+                null,
+                null
+            ],
+            "timestamp": {
+                "local": "2022-06-07T16:05:58.362847+07:00",
+                "utc": "2022-06-07T09:05:58.362847+00:00"
+            },
+            "url": "https://jsonplaceholder.typicode.com/users"
+        },
+        "response": {
+            "body": {
+                "company": {
+                    "code": 2020,
+                    "name": "KPW"
+                },
+                "id": 11,
+                "name": "Kachen",
+                "username": "Learning3Thai"
+            },
+            "headers": {
+                "Access-Control-Allow-Credentials": "true",
+                "Access-Control-Expose-Headers": "Location",
+                "CF-Cache-Status": "DYNAMIC",
+                "CF-RAY": "71783a9f4f3a95af-CNX",
+                "Cache-Control": "no-cache",
+                "Connection": "keep-alive",
+                "Content-Length": "121",
+                "Content-Type": "application/json; charset=utf-8",
+                "Date": "Tue, 07 Jun 2022 09:05:58 GMT",
+                "Etag": "W/\"79-vAeO4d/4mmrwMiv0z13TGc7yoIU\"",
+                "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "Expires": "-1",
+                "Location": "http://jsonplaceholder.typicode.com/users/11",
+                "NEL": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+                "Pragma": "no-cache",
+                "Report-To": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=hNBtgUCwdsQJnp5On1%2Bhyl31DrPcS7HYBqVzpOq%2FUCU2yRBe36mTvkiBWVNX7tG2SW5z3JlQUCsjLYO5yxsTp0ry5gRHYgQbDFJfrrTYXdw%2B5a4NYX4KONJNjM54ImfhiZcDD8TXLciO78%2FpG9X0syTQ2nHSV3gxh6G2\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+                "Server": "cloudflare",
+                "Vary": "Origin, X-HTTP-Method-Override, Accept-Encoding",
+                "Via": "1.1 vegur",
+                "X-Content-Type-Options": "nosniff",
+                "X-Powered-By": "Express",
+                "X-Ratelimit-Limit": "1000",
+                "X-Ratelimit-Remaining": "999",
+                "X-Ratelimit-Reset": "1654592798",
+                "alt-svc": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+            },
+            "reason": "Created",
+            "seconds": 0.91123,
+            "status": 201
+        },
+        "schema": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "default": true,
+            "description": "Rest Post: POST json body and write to file",
+            "examples": [],
+            "properties": {
+                "request": {
+                    "properties": {
+                        "body": {
+                            "properties": {
+                                "company": {
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "code",
+                                        "name"
+                                    ],
+                                    "type": "object"
+                                },
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "username": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "company",
+                                "id",
+                                "name",
+                                "username"
+                            ],
+                            "type": "object"
+                        },
+                        "query": {
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                },
+                "response": {
+                    "properties": {
+                        "body": {
+                            "properties": {
+                                "company": {
+                                    "properties": {
+                                        "code": {
+                                            "default": 2020,
+                                            "type": "integer"
+                                        },
+                                        "name": {
+                                            "default": "KPW",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "code",
+                                        "name"
+                                    ],
+                                    "type": "object"
+                                },
+                                "id": {
+                                    "default": 11,
+                                    "type": "integer"
+                                },
+                                "name": {
+                                    "default": "Kachen",
+                                    "type": "string"
+                                },
+                                "username": {
+                                    "default": "Learning3Thai",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "company",
+                                "id",
+                                "name",
+                                "username"
+                            ],
+                            "type": "object"
+                        },
+                        "status": {
+                            "enum": [
+                                201
+                            ],
+                            "type": "integer"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "title": "POST https://jsonplaceholder.typicode.com/users",
+            "type": "object"
+        },
+        "spec": {}
+    }
+]

@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "default": 11
+        },
+        "name": {
+            "type": "string",
+            "default": "Kachen"
+        },
+        "username": {
+            "type": "string",
+            "default": "Learning3Thai"
+        },
+        "company": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "default": "KPW"
+                },
+                "code": {
+                    "type": "integer",
+                    "default": 2020
+                }
+            },
+            "required": [
+                "code",
+                "name"
+            ]
+        }
+    },
+    "required": [
+        "company",
+        "id",
+        "name",
+        "username"
+    ]
+}

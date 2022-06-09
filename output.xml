@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220607 16:05:57.019" rpa="false" schemaversion="3">
+<suite id="s1" name="Rest Post" source="D:\Advance_Robot_Python\Robot Framework_12_REST POST\rest_post.robot">
+<test id="s1-t1" name="POST json body and write to file" line="8">
+<kw name="POST" library="REST">
+<arg>https://jsonplaceholder.typicode.com/users</arg>
+<arg>${json}</arg>
+<tag>http</tag>
+<doc>*Sends a POST request to the endpoint.*</doc>
+<status status="PASS" starttime="20220607 16:05:57.444" endtime="20220607 16:05:58.370"/>
+</kw>
+<kw name="Integer" library="REST">
+<arg>response status</arg>
+<arg>201</arg>
+<tag>assertions</tag>
+<doc>*Asserts the field as JSON integer.*</doc>
+<status status="PASS" starttime="20220607 16:05:58.371" endtime="20220607 16:05:58.373"/>
+</kw>
+<kw name="Output" library="REST">
+<arg>response body</arg>
+<tag>I/O</tag>
+<doc>*Outputs JSON to terminal or a file.*</doc>
+<msg timestamp="20220607 16:05:58.374" level="INFO">
+{
+    "id": 11,
+    "name": "Kachen",
+    "username": "Learning3Thai",
+    "company": {
+        "name": "KPW",
+        "code": 2020
+    }
+}</msg>
+<status status="PASS" starttime="20220607 16:05:58.374" endtime="20220607 16:05:58.397"/>
+</kw>
+<kw name="Output" library="REST">
+<arg>response body</arg>
+<arg>${OUTPUTDIR}/response.json</arg>
+<tag>I/O</tag>
+<doc>*Outputs JSON to terminal or a file.*</doc>
+<msg timestamp="20220607 16:05:58.398" level="INFO">
+{
+    "id": 11,
+    "name": "Kachen",
+    "username": "Learning3Thai",
+    "company": {
+        "name": "KPW",
+        "code": 2020
+    }
+}</msg>
+<status status="PASS" starttime="20220607 16:05:58.397" endtime="20220607 16:05:58.400"/>
+</kw>
+<kw name="Output Schema" library="REST">
+<arg>response body</arg>
+<arg>${OUTPUTDIR}/schema_response.json</arg>
+<tag>I/O</tag>
+<doc>*Outputs JSON Schema to terminal or a file.*</doc>
+<msg timestamp="20220607 16:05:58.403" level="INFO">
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "default": 11
+        },
+        "name": {
+            "type": "string",
+            "default": "Kachen"
+        },
+        "username": {
+            "type": "string",
+            "default": "Learning3Thai"
+        },
+        "company": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "default": "KPW"
+                },
+                "code": {
+                    "type": "integer",
+                    "default": 2020
+                }
+            },
+            "required": [
+                "code",
+                "name"
+            ]
+        }
+    },
+    "required": [
+        "company",
+        "id",
+        "name",
+        "username"
+    ]
+}</msg>
+<status status="PASS" starttime="20220607 16:05:58.402" endtime="20220607 16:05:58.411"/>
+</kw>
+<kw name="REST Instances" library="REST">
+<arg>${OUTPUTDIR}/rest.json</arg>
+<arg>sort_keys=true</arg>
+<tag>I/O</tag>
+<doc>*Writes the instances as JSON to a file.*</doc>
+<status status="PASS" starttime="20220607 16:05:58.412" endtime="20220607 16:05:58.414"/>
+</kw>
+<status status="PASS" starttime="20220607 16:05:57.444" endtime="20220607 16:05:58.414"/>
+</test>
+<status status="PASS" starttime="20220607 16:05:57.020" endtime="20220607 16:05:58.416"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Rest Post">Rest Post</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
